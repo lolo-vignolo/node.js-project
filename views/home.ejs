@@ -1,0 +1,20 @@
+<%-include("partials/header")-%>
+
+<h1>Home</h1>
+<p><%=firstText%></p>
+
+<%# Instead of using the for loop located at the end of app.js, we can
+use this method to make my code shorter. %> %>
+
+<% posts.forEach(function(post){%>
+<h1><%=(post.title);%></h1>
+
+<p><%=(post.bodyText).substring(0, 100) + " ...";%>
+  <a href = "/posts/<%=post.title%>">Read More</a>
+</p>
+<%});%>
+
+
+
+
+<%-include("partials/footer")-%>
